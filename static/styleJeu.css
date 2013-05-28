@@ -1,0 +1,253 @@
+
+
+#case1
+{
+   width:49px; height:49px; margin:5px; float:left;
+   text-align:center; 
+}
+#case2
+{
+	width:49px; height:49px; margin:5px; float:left;
+    text-align:center; 
+}
+#case3
+{
+	width:49px; height:49px; margin:5px; float:left;
+   text-align:center; 
+}
+#case4
+{
+	width:49px; height:49px; margin:5px; float:left;
+   text-align:center; 
+}
+#case5
+{
+	width:49px; height:49px; margin:5px; float:left;
+   text-align:center; 
+}
+#case6
+{
+	width:49px; height:49px; margin:5px; float:left;
+   text-align:center; 
+}
+#case7
+{
+	width:49px; height:49px; margin:5px; float:left;
+   text-align:center; 
+}
+
+
+.centre
+{
+	height:49px; 
+	width:49px;
+	background-image:url('cases/centre.png');
+	background-color:#000000;
+}
+
+.motTriple
+{
+	height:49px; 
+	width:49px;
+	background-image:url('cases/MOTTRIPLE.png');
+	background-color:#D61E6E;
+}
+
+.motDouble
+{
+	height:49px; 
+	width:49px;
+	background-image:url('cases/MOTDOUBLE.png');
+	background-color:#D53F08;
+}
+
+.lettreTriple
+{
+	height:49px; 
+	width:49px;
+	background-image:url('cases/LETTRETRIPLE.png');
+	background-color:#2257A6;
+}
+
+.lettreDouble
+{
+	height:49px; 
+	width:49px;
+	background-image:url('cases/LETTREDOUBLE.png');
+	background-color:#17630B;
+}
+
+.caseBlanche
+{
+	height:49px; 
+	width:49px;
+	background-image:url('cases/CASESIMPLE.png');
+}
+
+.A
+{
+	height:48px; 
+	width:48px;
+	background-image:url('pions/A.png');
+}
+
+.B
+{
+	height:48px; 
+	width:48px;
+	background-image:url('pions/B.png');
+}
+.C
+{
+	height:48px; 
+	width:48px;
+	background-image:url('pions/C.png');
+}
+.D
+{
+	height:48px; 
+	width:48px;
+	background-image:url('pions/D.png');
+}
+.E
+{
+	height:48px; 
+	width:48px;
+	background-image:url('pions/E.png');
+}
+
+.F
+{
+	height:48px; 
+	width:48px;
+	background-image:url('pions/F.png');
+}
+
+.G
+{
+	height:48px; 
+	width:48px;
+	background-image:url('pions/G.png');
+}
+.H
+{
+	height:48px; 
+	width:48px;
+	background-image:url('pions/H.png');
+}
+.I
+{
+	height:48px; 
+	width:48px;
+	background-image:url('pions/I.png');
+}
+.J
+{
+	height:48px; 
+	width:48px;
+	background-image:url('pions/J.png');
+}
+.K
+{
+	height:48px; 
+	width:48px;
+	background-image:url('pions/K.png');
+}
+.L
+{
+	height:48px; 
+	width:48px;
+	background-image:url('pions/L.png');
+}
+.M
+{
+	height:48px; 
+	width:48px;
+	background-image:url('pions/M.png');
+}
+.N
+{
+	height:48px; 
+	width:48px;
+	background-image:url('pions/N.png');
+}
+.O
+{
+	height:48px; 
+	width:48px;
+	background-image:url('pions/O.png');
+}
+.P
+{
+	height:48px; 
+	width:48px;
+	background-image:url('pions/P.png');
+}
+
+.Q
+{
+	height:48px; 
+	width:48px;
+	background-image:url('pions/Q.png');
+}
+.R
+{
+	height:48px; 
+	width:48px;
+	background-image:url('pions/R.png');
+}
+.S
+{
+	height:48px; 
+	width:48px;
+	background-image:url('pions/S.png');
+}
+.T
+{
+	height:48px; 
+	width:48px;
+	background-image:url('pions/T.png');
+}
+.U
+{
+	height:48px; 
+	width:48px;
+	background-image:url('pions/U.png');
+}
+.V
+{
+	height:48px; 
+	width:48px;
+	background-image:url('pions/V.png');
+}
+.W
+{
+	height:48px; 
+	width:48px;
+	background-image:url('pions/W.png');
+}
+.X
+{
+	height:48px; 
+	width:48px;
+	background-image:url('pions/X.png');
+}
+.Y
+{
+	height:48px; 
+	width:48px;
+	background-image:url('pions/Y.png');
+}
+.Z
+{
+	height:48px; 
+	width:48px;
+	background-image:url('pions/Z.png');
+}
+
+._
+{
+	height:48px; 
+	width:48px;
+	background-image:url('pions/NEUTRE.png');
+}
