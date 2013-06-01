@@ -1,6 +1,6 @@
 	/* Get list of users */
 exports.get_user_list = function(req, cb) {
-    req.app.db.query('select * from users where etat=1', cb);
+    req.app.db.query('select * from users', cb);
 };
 
 exports.get_user_connected = function(res, cb){
