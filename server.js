@@ -1,5 +1,5 @@
 					/*-----------------------------------------------
-					 * Scrabble && mini Chat par Davy NZE, UVSQ 2013.
+					 * Scrabble && mini Chat par Dav-Davys, UVSQ 2013.
 					 * ----------------------------------------------*/
 				
 
@@ -21,9 +21,9 @@ var opts = {
   db: {
     type: 'mysql',
     host: 'localhost',
-    user: 'root',
-    password: 'davys',
-    database: 'projet'
+    user: 'username',
+    password: 'password',
+    database: 'database_name'
   }, 
   default_route: '/index',
   socket_io: true
@@ -49,39 +49,37 @@ app.f_routes.index = function(req, res)
 
 app.f_routes.sign = function(req, res)
 {
-	if(req.session.loggedin) {
-		// If loggedin, redirect to home page
-		res.redirect('/jeu');
+    if(req.session.loggedin) {
+	res.redirect('/jeu');
     } 
     else if (req.method == 'POST') 
     {
-		app_db.sign(req, function(err, result, message) 
-		{
-		    if (err)
-		    {
-				console.error(err);
-				res.send(500, 'Internal Server Error');
-		    } else if (result) 
-		    {
-					/* Initialisation de la session */
-				req.session.loggedin = result;
+	app_db.sign(req, function(err, result, message) 
+	{
+	    if (err)
+	    {
+		console.error(err);
+		res.send(500, 'Internal Server Error');
+	    } else if (result) 
+	    {
+			/* Initialisation de la session */
+		req.session.loggedin = result;
 
-					/* L'id de l'user correspondra a son login */
-				var id = req.session.loggedin.login;
+			/* L'id de l'user correspondra a son login */
+		var id = req.session.loggedin.login;
 
-					/* Enregistrement de la connexion */
-				users[id] = req.session.loggedin;
+			/* Enregistrement de la connexion */
+		users[id] = req.session.loggedin;
 
-					/* Redirection vers le jeu */
-				res.redirect('/jeu');
-		    } else 
-				res.render('sign.mu', {sign : 'Enregistrement', erreur:'Mail déjà lié à un compte'});
-		});
+		/* Redirection vers le jeu */
+		res.redirect('/jeu');
+	      } else 
+		res.render('sign.mu', {sign : 'Enregistrement', erreur:'Mail déjà lié à un compte'});
+	});
     } else {
 		res.render('sign.mu', {sign : 'Enregistrement'});
     }
 };
-
 
 	/*----------------- Authentification d'un utilisateur -----------------*/
 
@@ -124,7 +122,6 @@ app.f_routes.login = function(req, res)
 	}
 };
 
-
 	/*-------------------- Déconnexion d'un utilisateur ------------------------*/
 
 app.f_routes.logout = function(req, res) 
@@ -140,17 +137,15 @@ app.f_routes.logout = function(req, res)
 		res.redirect('/login');
 };
 
-
 	/* ----------------- Direction sur la fenêtre de jeu  ------------------*/
 
 app.f_routes.jeu = function(req, res) 
 {
-	if (req.session.loggedin) 
-		res.render('jeu.mu', {title : 'Jeu', userLog:req.session.loggedin.login});	
+    if (req.session.loggedin) 
+	res.render('jeu.mu', {title : 'Jeu', userLog:req.session.loggedin.login});	
     else
-		res.redirect('/login');
+	res.redirect('/login');
 }; 
-
 
 	/*------------------ La route vers l'aide du jeu -----------------------*/
 app.f_routes.aide = function(req, res)
