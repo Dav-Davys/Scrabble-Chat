@@ -216,7 +216,22 @@ $(function(){
     });
 
 	socket.on('motIncorrect', function(data){
+		var motJoue = data.resultat.mot;
 
+		alert('Le mot  " '+motJoue+' " est incorrect   ');
+		for(i in data.donnees)
+    	{
+  				/* Suppression de toutes les lettres placées */
+    		$('#'+data.donnees[i].lieu).removeClass($('#'+data.donnees[i].lieu).attr('class'));
+    		$('#'+data.donnees[i].lieu).addClass(''+data.donnees[i].valeurLieu+'');
+    		$('#'+data.donnees[i].lieu).droppable( "option", "disabled", false );
+
+    			/* On les remet dans le sac */
+    		$('#'+data.donnees[i].initial).removeClass($('#'+data.donnees[i].initial).attr('class'));
+    		$('#'+data.donnees[i].initial).addClass(''+data.donnees[i].valeur+'');
+    	}
+    		/* On efface ce qui a été joué */
+    	contenuJeu = {};
 	});
 
 		/* Jouer quand c'est mon tour */
@@ -548,7 +563,7 @@ $(function(){
 
 	/*--------------------------------------- Partie js classique ------------------------------------------*/
 
-	/* Fonction permettant de formet le mot avec les lettres jouées et comptant les points */
+	/* Fonction permettant de former le mot avec les lettres jouées et comptant les points */
 function formationMot(tab, obj)
 {
 	var valeurLetrres = valeurDesLettres();
@@ -556,7 +571,11 @@ function formationMot(tab, obj)
 	var nbrPoints = 0;
 	var mot='';
 
+	var autresMots = {};
+
 	var motT=1, motD=1, lettreD, lettreT;
+
+		/* Formation du mot et comptage des points */
 	for(i in tab)
 	{
 		for(j in obj)
@@ -579,6 +598,21 @@ function formationMot(tab, obj)
 
 		}
 	}
+
+		/* Mots formés avec les lettres déjà présentes */
+	/*for(i in tab)
+	{
+		for(j in obj)
+		{
+			if(tab[i] == obj[j].lieu)
+			{
+				
+			}
+
+		}
+	}*/
+
+
 	nbrPoints = nbrPoints*motT*motD;
 	tmp.mot = mot;
 	tmp.points = nbrPoints
@@ -779,7 +813,7 @@ function valeurDesLettres()
 	 	I : 1,
 	 	J : 8,
 	 	K : 10, 
-	 	L : 2, 
+	 	L : 1, 
 	 	M : 2,
 	 	N : 1,
 	 	O : 1, 
