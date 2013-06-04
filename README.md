@@ -2,6 +2,9 @@ Exemple d'utilsation de was_framework.
 
 Cette application présente un exemple d'utilisation du framework "was_framework" de Node js. Nous y implémentons une version du Scrabble qui intègre un mini chat.
 
+Pour plus d'informations sur was_framework consultez le lien suivant : https://github.com/defeo/was_framework
+
+
 Afin de la tester procéder comme suit :
 
 1- Télécharger l'application.
