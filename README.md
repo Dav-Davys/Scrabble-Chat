@@ -6,8 +6,8 @@ Afin de la tester procéder comme suit :
 
 1- Télécharger l'application.
 
-Si vous avez node js installer sur votre machine, passer à l'étape 2. 
-Si non merci de bien vouloir vous rendre sur nodejs.org.
+Si vous avez node js installé sur votre machine, passer à l'étape 2. 
+Si non merci de bien vouloir vous rendre sur nodejs.org pour l'installer.
 
 2- Exécuter le script suivant pour créer la base de données.
 
