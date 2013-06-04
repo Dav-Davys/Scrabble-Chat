@@ -321,6 +321,11 @@ app.io.sockets.on('connection', function(socket)
 		socket.broadcast.emit('piocheOk', data);
 	});
 
+		/* Le mot est incorrect */
+	socket.on('motIncorrect', function(data){
+		socket.emit('motIncorrect', data);
+	});
+
 		/*---------------- Partie chat --------------------*/
 
 		/* Nouveau message */
