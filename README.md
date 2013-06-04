@@ -4,11 +4,16 @@ Cette application présente un exemple d'utilisation du framework "was_framework
 
 Afin de la tester procéder comme suit :
 
-1- Exécuter le script suivant pour créer la base de données.
+1- Télécharger l'application.
+
+Si vous avez node js installer sur votre machine, passer à l'étape 2. 
+Si non merci de bien vouloir vous rendre sur nodejs.org.
+
+2- Exécuter le script suivant pour créer la base de données.
 
     create database database_name;
     create table users (login varchar(15) not null primary key, email varchar(20) not null unique, pwd  varchar(50))';
     
-2- Lancer l'application : node server.js
+3- Lancer l'application : node server.js
 
-3- A vous de jouer.
+4- A vous de jouer.
